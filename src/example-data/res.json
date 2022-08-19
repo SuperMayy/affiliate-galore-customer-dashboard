@@ -1,0 +1,203 @@
+[
+    {
+        "affiliate_id": "a538683c98",
+        "name": "Booking.com",
+        "description": "First started in 1996, Booking.com is one of the largest eCommerce travel companies in the world.",
+        "commission": "25% - 40% Per Sale",
+        "cookie_duration": "30 Days",
+        "category": [
+            "Airline",
+            "High-Paying",
+            "Hotel",
+            "Travel"
+        ],
+        "logo": "https://getlasso.co/wp-content/uploads/booking-com.png",
+        "affiliate_link": "https://www.booking.com/affiliate-program/v2/index.html"
+    },
+    {
+        "affiliate_id": "f7cd67fe4f",
+        "name": "Turkish Airlines",
+        "description": "Turkish Airlines is the national flag carrier airline of Turkey. They offer flights to 290 destinations in 119 countries.",
+        "commission": "2 - 5% Per Sale",
+        "cookie_duration": "30 Days",
+        "category": [
+            "Airline"
+        ],
+        "logo": "https://getlasso.co/wp-content/uploads/Turkish-Airlines.png",
+        "affiliate_link": "https://www.viglink.com/merchants/38487/turkish-airlines-affiliate-program"
+    },
+    {
+        "affiliate_id": "2bafbc7cb0",
+        "name": "Austrian Airlines",
+        "description": "Austrian Airlines operates a global route network of approximately 130 destinations, being particularly dense in Central and Eastern Europe.",
+        "commission": "1.50% Per Sale",
+        "cookie_duration": "14 Days",
+        "category": [
+            "Airline",
+            "Travel"
+        ],
+        "logo": "https://getlasso.co/wp-content/uploads/Austrian-Airlines.jpg",
+        "affiliate_link": "https://signup.cj.com/member/signup/publisher/"
+    },
+    {
+        "affiliate_id": "4f023905e2",
+        "name": "Travelpayouts",
+        "description": "Travelpayouts helps publishers earn on all types of travel services, including flight tickets, accommodation, cruises, tours, car rentals, insurance, and much more.",
+        "commission": "50% Per Sale",
+        "cookie_duration": "30 Days",
+        "category": [
+            "Airline",
+            "Automotive",
+            "Cruise",
+            "High-Paying",
+            "Hotel",
+            "Travel"
+        ],
+        "logo": "https://getlasso.co/wp-content/uploads/Travelpayouts.jpg",
+        "affiliate_link": "https://tp.click/2rl"
+    },
+    {
+        "affiliate_id": "d0ed5884e2",
+        "name": "Points.com",
+        "description": "Points.com is a company that sells airline or hotel points and miles to consumers that provides a market to exchange and redeem points.",
+        "commission": "4% Per Sale",
+        "cookie_duration": "15 Days",
+        "category": [
+            "Airline",
+            "Travel"
+        ],
+        "logo": "https://getlasso.co/wp-content/uploads/Points-com.jpg",
+        "affiliate_link": "https://signup.cj.com/member/signup/publisher/"
+    },
+    {
+        "affiliate_id": "63d90f576d",
+        "name": "Kayak",
+        "description": "Kayak was the first price comparison website for flight, hotel, and car hire. They\u2019re still one of the leading travel search engines out there thanks to a ton of brand presence.",
+        "commission": "$0.17 - $1.09 Per Sale",
+        "cookie_duration": "30 Days",
+        "category": [
+            "Airline",
+            "High-Paying",
+            "Travel"
+        ],
+        "logo": "https://getlasso.co/wp-content/uploads/kayak-logo.png",
+        "affiliate_link": "https://signup.cj.com/member/signup/publisher/"
+    },
+    {
+        "affiliate_id": "2e117ba8ee",
+        "name": "United Vacations",
+        "description": "United Vacations combines the lowest airfares on United Airlines with everything you need to create the vacation experience you\u2019ve dreamed of.",
+        "commission": "0.50% Per Sale",
+        "cookie_duration": "30 Days",
+        "category": [
+            "Airline",
+            "Travel"
+        ],
+        "logo": "https://getlasso.co/wp-content/uploads/united-vacations-logo.png",
+        "affiliate_link": "https://signup.cj.com/member/signup/publisher/"
+    },
+    {
+        "affiliate_id": "d016850796",
+        "name": "Hawaiian Airlines",
+        "description": "Hawaiian Airlines, Hawaii's largest and longest-serving airline, offers non-stop service from the U.S mainland and international destinations.",
+        "commission": "1.50% Per Sale",
+        "cookie_duration": "30 Days",
+        "category": [
+            "Airline",
+            "Travel"
+        ],
+        "logo": "https://getlasso.co/wp-content/uploads/Hawaiian-Airlines.jpg",
+        "affiliate_link": "https://signup.cj.com/member/signup/publisher/"
+    },
+    {
+        "affiliate_id": "c6ccef8a95",
+        "name": "flydubai",
+        "description": "flydubai operates in 95 destinations, serving the Middle East, Africa, Asia, and Europe from Dubai. Book a flight with low airfare.",
+        "commission": "1.5% Per Sale",
+        "cookie_duration": "48 Hours",
+        "category": [
+            "Airline",
+            "Travel"
+        ],
+        "logo": "https://getlasso.co/wp-content/uploads/flydubai-logo.jpeg",
+        "affiliate_link": "https://www.flydubai.com/en/flying-with-us/partners/flydubai-affiliate-program"
+    },
+    {
+        "affiliate_id": "5cf9ae66ac",
+        "name": "OneTravel",
+        "description": "What makes OneTravel different from other travel sites is that they focus on a range of specialties for their visitors, including senior, gay and lesbian travel, as well as focusing on travel to exotic locations, such as India.",
+        "commission": "$5 - $25 Per Sale",
+        "cookie_duration": "90 Days",
+        "category": [
+            "Airline",
+            "Travel"
+        ],
+        "logo": "https://getlasso.co/wp-content/uploads/onetravel-logo.png",
+        "affiliate_link": "https://www.onetravel.com/affiliates/program"
+    },
+    {
+        "affiliate_id": "ec746271cf",
+        "name": "Air Malta",
+        "description": "Air Malta's routes include most locations in Europe and the Middle East, but they\u2019ve kept their focus on regional rather than international flights.",
+        "commission": "2.5% Per Sale",
+        "cookie_duration": "15 Days",
+        "category": [
+            "Airline",
+            "Travel"
+        ],
+        "logo": "https://getlasso.co/wp-content/uploads/air-malta-logo.jpg",
+        "affiliate_link": "https://signup.cj.com/member/signup/publisher/"
+    },
+    {
+        "affiliate_id": "1bbe3b76ee",
+        "name": "Wingly",
+        "description": "Wingly is the largest European flight sharing platform. They connect private pilots with passengers for unforgettable sightseeing flights.",
+        "commission": "5% Per Sale",
+        "cookie_duration": "30 Days",
+        "category": [
+            "Airline",
+            "Travel"
+        ],
+        "logo": "https://getlasso.co/wp-content/uploads/Wingly-UK.jpg",
+        "affiliate_link": "https://ui.awin.com/merchant-profile/21868"
+    },
+    {
+        "affiliate_id": "9ab6d14bb9",
+        "name": "Emirates",
+        "description": "Emirates is recognized as one of the premier airlines in the world right now, focused on providing their passengers with a level of comfort (and often luxury) that would have seemed impossible just a few short years ago.",
+        "commission": "1.25% - 2.5% Per Sale",
+        "cookie_duration": "30 Days",
+        "category": [
+            "Airline",
+            "Travel"
+        ],
+        "logo": "https://getlasso.co/wp-content/uploads/Emirates.jpg",
+        "affiliate_link": "https://signup.cj.com/member/signup/publisher/"
+    },
+    {
+        "affiliate_id": "f2fb5cb87f",
+        "name": "Etihad Airways",
+        "description": "From its Abu Dhabi base, Etihad Airways flies to over 100 existing or announced passenger and cargo destinations in the Middle East, Africa, Europe, Asia, Australia, and the Americas.",
+        "commission": "2% Per Sale",
+        "cookie_duration": "30 Days",
+        "category": [
+            "Airline",
+            "Travel"
+        ],
+        "logo": "https://getlasso.co/wp-content/uploads/etihad-airways.png",
+        "affiliate_link": "https://www.etihad.com/en/promotions/etihad-affiliate-program/"
+    },
+    {
+        "affiliate_id": "ba783f729d",
+        "name": "Qatar Airways",
+        "description": "Qatar Airlines serves 160 international destinations, and doing so in style in a fleet of the latest jet aircraft. Their efforts have paid off with Qatar Airways being named \u201cAirline of the Year\u201d almost every year since 2011.",
+        "commission": "3% Per Order",
+        "cookie_duration": "30 Days",
+        "category": [
+            "Airline",
+            "Travel"
+        ],
+        "logo": "https://getlasso.co/wp-content/uploads/qatar-airways-logo.png",
+        "affiliate_link": "https://signup.cj.com/member/signup/publisher/"
+    }
+]
