@@ -46,8 +46,17 @@
 }
 
 .already-have-account-container {
-  padding-top: 10px;
+  padding: 10px 0px 0px 10px;
   text-align: right;
+  display: flex;
+  flex-direction: column;
+  float: left;
+}
+
+a {
+  /* color: var(--bs-link-color);
+  text-decoration: underline; */
+  width: fit-content;
 }
 
 .sign-up-form form {
@@ -67,6 +76,7 @@ input {
   padding: 5px;
   border-radius: 20px;
   border-color: rgb(0 0 0 / 12%);
+  padding-left: 20px;
 }
 
 label {
@@ -181,7 +191,6 @@ header a:active {
 .affiliate-input-search{
   border-radius: 20px 0px 0px 20px;
   width: 80%;
-  padding-left: 20px;
 }
 
 button.search-button {
@@ -191,7 +200,9 @@ button.search-button {
   background: #E0E0E0;
 }
 
-.dashboard-container, .affiliate-card {
+.dashboard-container, 
+.affiliate-card, 
+.profile-card {
   background: #a28df8;
   padding: 30px 50px;
   margin: 20px 50px;
@@ -200,7 +211,8 @@ button.search-button {
   box-shadow: rgb(0 0 0 / 20%) 5px 5px 20px 5px;
 }
 
-.affiliate-card{
+.affiliate-card, 
+.profile-card{
   background-color: white;
 }
 
@@ -270,6 +282,16 @@ button.blue-button{
   flex-direction: row;
   justify-content: space-between;
   margin: 20px 70px;
+  padding: 20px 0px;
+}
+
+.nav-section {
+  border-bottom: 1px rgb(0 0 0 / 10%) solid;
+  padding: 20px;
+}
+
+.side-nav button{
+  margin: 20px;
 }
 
 /* Responsive layout - makes a one column-layout instead of a two-column layout */

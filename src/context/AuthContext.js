@@ -15,8 +15,32 @@ export const AuthProvider = ({ children }) => {
     return auth.createUserWithEmailAndPassword(email, password);
   }
 
-  function login(email, password) {
-    return auth.signInWithEmailAndPassword(email, password)
+  const login = (email, password) => {
+    return auth.signInWithEmailAndPassword(email, password);
+  }
+
+  const logout = () => {
+    return auth.signOut();
+  }
+
+  const resetPassword = (email) => {
+    return auth.sendPasswordResetEmail(email)
+  }
+
+  const updateEmail = (email) => {
+    return currentUser.updateEmail(email)
+  }
+
+  const updatePassword = (password) => {
+    return currentUser.updatePassword(password)
+  }
+
+  const updateDisplayName = (displayName) => {
+    return currentUser.updateDisplayName(displayName);
+  }
+
+  const updatePhotoURL = (photoURL) => {
+    return currentUser.updatePhotoURL(photoURL);
   }
 
   useEffect(() => {
@@ -31,7 +55,14 @@ export const AuthProvider = ({ children }) => {
   const value = {
     currentUser,
     signup,
-    login
+    login,
+    logout,
+    resetPassword,
+    updateEmail,
+    updatePassword,
+    updateDisplayName,
+    updatePhotoURL
+
   };
 
   return (

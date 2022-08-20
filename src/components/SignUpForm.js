@@ -27,6 +27,10 @@ const SignUpForm = () => {
         await signup(emailRef.current.value, passwordRef.current.value);
         navigate('/');
     } catch (err) {
+        // 👇️ clear input field value
+        emailRef.current.value = '';
+        passwordRef.current.value = '';
+        
         if(err.code === "auth/weak-password"){
             return setError('Your password should be at least 6 characters')
         }
@@ -59,7 +63,7 @@ const SignUpForm = () => {
                 </button>
             </form>
             <div className="already-have-account-container">
-                Already have an account? <Link to="/login">Log In</Link>
+                <p>Already have an account? <Link to="/login">Log In</Link></p>
             </div>
         </div>
     </div>

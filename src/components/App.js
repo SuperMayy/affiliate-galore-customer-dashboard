@@ -3,7 +3,12 @@ import { AuthProvider } from '../context/AuthContext.js';
 import AuthenticationPage from './AuthenticationPage';
 import DashBoard from './DashBoard';
 import Profile from './Profile';
+import MyAffiliates from './MyAffiliates';
+import ForgotPassword from './ForgotPassword';
+import UpdateProfile from './UpdateProfile';
+import Error from './Error';
 import Layout from '../layouts/Layout';
+import PrivateRoute from './PrivateRoute';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 const App = () => {
@@ -14,15 +19,20 @@ const App = () => {
             {/* public links */}
             <Route path="/signup" element={<AuthenticationPage />} />
             <Route path="/login" element={<AuthenticationPage isLogin={true} />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
 
             {/* protected routes */}
-            <Route element={<Layout />}>
-              <Route exact path="/" element={<DashBoard />} />
-              <Route exact path="/profile" element={<Profile />} />
+            <Route element={<PrivateRoute/>}>
+              <Route element={<Layout />}>
+                <Route exact path="/" element={<DashBoard />} />
+                <Route exact path="/profile" element={<Profile />} />
+                <Route exact path="/my-affiliates" element={<MyAffiliates />} />
+                <Route exact path="/update-profile" element={<UpdateProfile />} />
+              </Route>
             </Route>
 
             {/* 404: catch all */}
-            {/* <Route path="*" element={<Error/>} /> */}
+            <Route path="*" element={<Error/>} />
         </Routes>
       </AuthProvider>
     </Router> 

@@ -22,7 +22,10 @@ const LogInForm = () => {
         await login(emailRef.current.value, passwordRef.current.value);
         navigate('/');
     } catch (err) {
-        console.log(err.code);
+        // 👇️ clear input field value
+        emailRef.current.value = '';
+        passwordRef.current.value = '';
+
         if(err.code === "auth/user-not-found"){
             return setError('This email does not exist in our database.')
         }
@@ -55,7 +58,8 @@ const LogInForm = () => {
                 </button>
             </form>
             <div className="already-have-account-container">
-                Need an account? <Link to="/signup">Sign Up</Link>
+                <p>Need an account? <Link to="/signup">Sign Up</Link></p>
+                <Link to="/forgot-password">Forgot you password?</Link>
             </div>
             <br/><br/>
         </div>
