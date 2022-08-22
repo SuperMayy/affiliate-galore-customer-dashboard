@@ -22,9 +22,9 @@ const SideNav = () => {
 
   return (
     <div className="side-nav">
-        <a href='https://www.affiliategalore.com'>
+        {/* <a href='https://www.affiliategalore.com'>
             <div className='nav-section logo'>Logo</div>
-        </a>
+        </a> */}
         <Link to="/">
             <div className='nav-section active'>
                 DashBoard

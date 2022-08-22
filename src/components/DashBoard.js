@@ -18,7 +18,7 @@ const DashBoard = () => {
         <button className='blue-button'>Categories</button>
         <button className='blue-button'>Best Paying</button>
       </div>
-      <div className='affiliates-container'>
+      <div className='affiliates-container dashboard'>
         <AffiliateCard/>
         <AffiliateCard/>
         <AffiliateCard/>

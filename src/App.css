@@ -270,6 +270,7 @@ button.blue-button{
 .category-list{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .hamburger-menu img{
@@ -284,6 +285,7 @@ button.blue-button{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 20px 70px;
   padding: 20px 0px;
 }
@@ -306,6 +308,23 @@ button.update-button {
   padding-right: 50px;
 }
 
+.me-auto.my-2.my-lg-0.navbar-nav.navbar-nav-scroll,
+a.navbar-brand,
+.navigation-bar{
+  display: none;
+}
+
+button.navbar-toggler.collapsed, button.navbar-toggler {
+  display: none;
+}
+.search-container.desktop {
+  margin-left: 50px;
+}
+
+nav.navigation-bar.navbar.navbar-expand-lg.navbar-light.bg-light {
+  background: white !important;
+}
+
 /* Responsive layout - makes a one column-layout instead of a two-column layout */
 @media (max-width: 850px) {
   .sign-up-column, .sign-up-column.form {
@@ -318,11 +337,88 @@ button.update-button {
     margin-left: 0px;
   }
 
-  .search-container{
+  .hamburger-menu{
+    display: block;
+  }
+
+  .call-to-action{
     display: none;
   }
 
-  .hamburger-menu{
+  .form-container {
+    justify-content: inherit;
+  }
+
+  .sign-up-form {
+    padding: 40px 40px;
+    border-radius: 50px;
+  }
+
+  .sign-up-text{
+    padding: 20px;
+  }
+
+  h2.sign-up-text{
+    font-size: 3rem;
+  }
+  
+  .profile-icon,
+  .help-icon {
+    display: none;
+  }
+
+  .dashboard-container, .affiliate-card, .profile-card {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 30px;
+  }
+
+  .filter-cotainer {
+    margin: 10px 20px;
+    padding: 0px;
+  }
+
+  .filter-cotainer button.blue-button{
+    padding: 10px;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  .page-content {
+    height: 100%;
+  } 
+
+  .navigation-bar{
     display: block;
+  }
+
+  .me-auto.my-2.my-lg-0.navbar-nav.navbar-nav-scroll,
+  a.navbar-brand {
+    display: block;
+  }
+
+  .me-auto.my-2.my-lg-0.navbar-nav.navbar-nav-scroll {
+    max-width: none !important;
+    padding: 20px 0px;
+  }
+
+  .search-container {
+    margin: 10px 0px 20px 0px;
+  }
+
+  button.navbar-toggler.collapsed {
+    display: block;
+  }
+
+  button.navbar-toggler {
+    display: inline-block;
+  }
+
+  .search-container.desktop {
+    display: none;
+  }
+
+  nav.navigation-bar.navbar.navbar-expand-lg.navbar-light.bg-light {
+    background: #a28df8 !important;
   }
 }

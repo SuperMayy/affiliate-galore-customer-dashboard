@@ -9,7 +9,7 @@ const AuthenticationPage = ({ page }) => {
     <>
         <div className="sign-up-container">
             <div className="sign-up-row">
-                <div className="sign-up-column">
+                <div className="sign-up-column call-to-action">
                     <div className="call-to-action-container text-content">
                         <div className="call-to-action">
                             <h1>Affiliate Galore</h1>

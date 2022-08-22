@@ -3,6 +3,7 @@ import React, { useRef} from "react";
 // import SearchIcon from '../assets/svgs/search.svg'
 import HamburgerIcon from '../assets/svgs/menu-icon.svg'
 import SideNav from "../components/SideNav";
+import NavigationBar from "../components/NavigationBar";
 
 const Layout = () => {
 
@@ -18,9 +19,9 @@ const Layout = () => {
     
   return (
     <main className="App">
-        <SideNav />
+        <SideNav/>
         <div className="right-div">
-            <header>
+            {/* <header>
                 <div className="hamburger-menu">
                     <img alt="hamburger menu button" src={HamburgerIcon}></img>
                 </div>
@@ -45,7 +46,8 @@ const Layout = () => {
                         <div className="profile-image"></div>
                     </div>
                 </Link>
-            </header>
+            </header> */}
+            <NavigationBar/>
             <div className="page-content">
                 <Outlet />
             </div>
