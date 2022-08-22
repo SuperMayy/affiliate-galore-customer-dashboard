@@ -4,7 +4,6 @@ import AuthenticationPage from './AuthenticationPage';
 import DashBoard from './DashBoard';
 import Profile from './Profile';
 import MyAffiliates from './MyAffiliates';
-import ForgotPassword from './ForgotPassword';
 import UpdateProfile from './UpdateProfile';
 import Error from './Error';
 import Layout from '../layouts/Layout';
@@ -17,9 +16,9 @@ const App = () => {
       <AuthProvider>
         <Routes>
             {/* public links */}
-            <Route path="/signup" element={<AuthenticationPage />} />
-            <Route path="/login" element={<AuthenticationPage isLogin={true} />} />
-            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/signup" element={<AuthenticationPage page="signup" />} />
+            <Route path="/login" element={<AuthenticationPage page="login" />} />
+            <Route path="/forgot-password" element={<AuthenticationPage page="forgotpassword" />} />
 
             {/* protected routes */}
             <Route element={<PrivateRoute/>}>

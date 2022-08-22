@@ -36,7 +36,15 @@ export const AuthProvider = ({ children }) => {
   }
 
   const updateDisplayName = (displayName) => {
-    return currentUser.updateDisplayName(displayName);
+    return currentUser.updateProfile({
+      displayName
+    }).then(() => {
+      // Update successful
+      console.log('Success');
+    }).catch((error) => {
+      // An error occurred
+      console.log('Error: ', error);
+    }); 
   }
 
   const updatePhotoURL = (photoURL) => {

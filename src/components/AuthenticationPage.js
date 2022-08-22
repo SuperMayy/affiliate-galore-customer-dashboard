@@ -1,8 +1,9 @@
 import React from "react";
 import SignUpForm from "./SignUpForm";
 import LogInForm from "./LogInForm";
+import ForgotPassword from "./ForgotPassword";
 
-const AuthenticationPage = ({ isLogin }) => { 
+const AuthenticationPage = ({ page }) => { 
 
   return (
     <>
@@ -21,7 +22,9 @@ const AuthenticationPage = ({ isLogin }) => {
                     </div>
                 </div>
                 <div className="sign-up-column form">
-                    { isLogin ? <LogInForm/> : <SignUpForm />}
+                    { page === "login" && <LogInForm/>}
+                    { page === "signup" && <SignUpForm/>}
+                    { page === "forgotpassword" && <ForgotPassword/>}
                 </div>
             </div>
         </div>
