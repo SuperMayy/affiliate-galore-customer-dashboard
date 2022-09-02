@@ -1,5 +1,5 @@
 .sign-up-container{
-  background: linear-gradient(90deg, #030050 0%, #4C4177 100%);
+  background: linear-gradient(-145deg, rgba(219,138,222,1) 0%, rgba(246,191,159,1) 100%) !important;
   max-height: 100vh;
 }
 
@@ -92,7 +92,7 @@ button.form-button {
   border: none;
   border-radius: 20px;
   padding: 12px;
-  background: linear-gradient(90deg, #030050 0%, #4C4177 100%);
+  background: #030050;
   color: white;
 }
 
@@ -133,10 +133,22 @@ header{
 }
 
 .side-nav{
-  background-color: #a28df8;
+  background-color: rgba(219, 138, 222);  
   width: 20%;
   height: 100vh;
   position: fixed;
+}
+
+.side-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.side-nav a:hover {
+  color: rgba(2,0,36,1);
+  text-decoration: none;
+  font-size: 1.4rem;
 }
 
 .profile-icon p {
@@ -148,9 +160,13 @@ header{
 .profile-image{
   width: 48px;
   height: 48px;
-  background-color: #030050;
+  background-color: #a28df8;
   margin: 0px 15px;
   border-radius: 50%;
+}
+
+.form-container a {
+  color: #a28df8;
 }
 
 .help-icon p{
@@ -206,7 +222,7 @@ button.search-button {
 .dashboard-container, 
 .affiliate-card, 
 .profile-card {
-  background: #a28df8;
+  background-color: rgba(219, 138, 222);  
   padding: 30px 50px;
   margin: 20px 50px;
   border-radius: 50px;
@@ -419,6 +435,6 @@ nav.navigation-bar.navbar.navbar-expand-lg.navbar-light.bg-light {
   }
 
   nav.navigation-bar.navbar.navbar-expand-lg.navbar-light.bg-light {
-    background: #a28df8 !important;
+    background: linear-gradient(-145deg, rgba(219,138,222,1) 0%, rgba(246,191,159,1) 100%) !important;
   }
 }

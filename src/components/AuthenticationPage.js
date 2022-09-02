@@ -16,7 +16,7 @@ const AuthenticationPage = ({ page }) => {
                             <p>Get access to 10,000 affiliate programs for free</p>
                         </div>
                         <div style={{marginTop: "75px", fontSize: "1.1rem"}}>
-                            <em>"If you want to <u>make a money online</u>, you need to <u>bookmark this site!</u>"</em>
+                            <em>"If you want to <u>make money online</u>, you need to <u>bookmark this site!</u>"</em>
                             <p>David Yorke - Content Creator</p>
                         </div>
                     </div>
