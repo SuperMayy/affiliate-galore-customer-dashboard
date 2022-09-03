@@ -1,24 +1,21 @@
 import React from 'react'
 
-const AffiliateCard = () => {
+const AffiliateCard = ({name, description, commission, categories, logo, data}) => {
   return (
     <div className='affiliate-card'>
         <div className='affilaite-container-head'>
-            <h3>Booking.com</h3>
+            <h3>{name}</h3>
             <img 
-                alt="booking.com-logo" 
-                src="https://getlasso.co/wp-content/uploads/booking-com.png"
+                alt={`${name} logo`}
+                src={logo}
                 className='affiliate-logo' 
             />
         </div>
-        <p>First started in 1996, Booking.com is one of the largest eCommerce travel companies in the world.</p>
-        <p>Commision: 25% - 40% Per Sale</p>
-        <div className='category-list'><p>Category: </p> 
+        <p>{description}</p>
+        <p>Commision: {commission}</p>
+        <div className='category-list'><p>Category: |</p> 
             <ul className='categories'>
-                <li>Airline,</li>
-                <li>High-Paying,</li>
-                <li>Hotel,</li>
-                <li>Travel</li>
+                {categories.map(category => <li key={category}>{category} |</li>)}
             </ul>
         </div>
         <button className='join-affiliate-button'>Join this Affiliate Program</button>
