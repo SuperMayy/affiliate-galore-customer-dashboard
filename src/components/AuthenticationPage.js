@@ -2,6 +2,7 @@ import React from "react";
 import SignUpForm from "./SignUpForm";
 import LogInForm from "./LogInForm";
 import ForgotPassword from "./ForgotPassword";
+import Logo from "../assets/images/logo.png"
 
 const AuthenticationPage = ({ page }) => { 
 
@@ -14,6 +15,9 @@ const AuthenticationPage = ({ page }) => {
                         <div className="call-to-action">
                             <h1>Affiliate Galore</h1>
                             <p>Get access to 10,000 affiliate programs for free</p>
+                        </div>
+                        <div className="logo-container">
+                            <img src={Logo} className="logo" alt="Affiliate Galore Logo" />
                         </div>
                         <div style={{marginTop: "75px", fontSize: "1.1rem"}}>
                             <em>"If you want to <u>make money online</u>, you need to <u>bookmark this site!</u>"</em>
