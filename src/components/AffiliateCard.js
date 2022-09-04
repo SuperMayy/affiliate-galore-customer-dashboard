@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AffiliateCard = ({name, description, commission, categories, logo, data}) => {
+const AffiliateCard = ({name, description, commission, categories, logo}) => {
   return (
     <div className='affiliate-card'>
         <div className='affilaite-container-head'>
@@ -13,7 +13,7 @@ const AffiliateCard = ({name, description, commission, categories, logo, data}) 
         </div>
         <p>{description}</p>
         <p>Commision: {commission}</p>
-        <div className='category-list'><p>Category: |</p> 
+        <div className='category-list'><p>Category: </p> 
             <ul className='categories'>
                 {categories.map(category => <li key={category}>{category} |</li>)}
             </ul>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { Link, useNavigate } from "react-router-dom";
+import logo from '../assets/images/logo.png'
 
 const SideNav = () => {
 
@@ -22,9 +23,11 @@ const SideNav = () => {
 
   return (
     <div className="side-nav">
-        {/* <a href='https://www.affiliategalore.com'>
-            <div className='nav-section logo'>Logo</div>
-        </a> */}
+        <a href='https://www.affiliategalore.com'>
+            <div className='nav-section logo'>
+                <img src={logo} alt="logo" className='logo-style'/>
+            </div>
+        </a>
         <Link to="/">
             <div className='nav-section active'>
                 DashBoard
@@ -40,6 +43,11 @@ const SideNav = () => {
                 Profile
             </div>
         </Link>
+        <a href='#'>
+            <div className='nav-section'>
+                Contact US
+            </div>
+        </a>
         <button onClick={handleLogOut} className="blue-button">
           Log Out
         </button>
