@@ -1,8 +1,46 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import AffiliateCard from './AffiliateCard';
-import allData from '../example-data/res.json'
+import loadingGif from '../assets/gifs/loading.gif'
+import axios from 'axios';
+
 
 const DashBoard = () => {
+  const [errMsg, setErrMsg] = useState(null);
+  const [isPending, setIsPending] = useState(true);
+  const [affiliates, setAffiliates] = useState();
+  const [category, setCategory] = useState('Beginner');
+
+  const handleCategory = () => {
+    setCategory()
+  }
+
+  const BASE_URL = 'api/v1/affiliates/search/?category=Beauty';
+
+  const fetchAffiliates = () => {
+    fetch(BASE_URL)
+    .then(res => {
+      if(!res.ok){
+        throw Error('There is a server error');
+      }
+      console.log('res', res);
+      return res.json();
+     })
+     .then(data => {
+      console.log('data: ', data);
+      setAffiliates(data);
+      setIsPending(false);
+      })
+      .catch(err => {
+        console.error(err)
+        setErrMsg(err.message)
+      }); 
+  }
+
+  useEffect(() => {
+    fetchAffiliates();
+
+  }, [])
+
   return (
     <>
       <div className='dashboard-container'>
@@ -20,18 +58,20 @@ const DashBoard = () => {
         <button className='blue-button'>Best Paying</button>
       </div>
       <div className='affiliates-container dashboard'>
-        {allData.map(data => {
+        {isPending ? errMsg ? <div>{errMsg}</div> : <div><img src={loadingGif} alt='loader' /></div> : 
+         affiliates.map(affiliate => {
           return (
-          <AffiliateCard 
-            key={data.affiliate_id}
-            name={data.name}
-            description={data.description}
-            commission={data.commission}
-            categories={data.category}
-            logo={data.logo}
-            data={data.affiliate_link}
-          />)
-        })}
+            <AffiliateCard 
+              key={affiliate.affiliate_id}
+              name={affiliate.name}
+              description={affiliate.description}
+              commission={affiliate.commission}
+              categories={affiliate.category}
+              logo={affiliate.logo}
+              data={affiliate.affiliate_link}
+            />)
+          })
+        }
       </div>
     </>
   )
