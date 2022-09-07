@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useAuth } from "../context/AuthContext.js";
 import AffiliateCard from './AffiliateCard';
-import allData from '../example-data/res.json'
+import allData from '../example-data/res.json';
 
 const MyAffiliates = () => {
+  const { currentUser } = useAuth();
+  const [errMsg, setErrMsg] = useState(null);
+  const [isPending, setIsPending] = useState(true);
+  const [affiliates, setAffiliates] = useState([]);
+
+  useEffect(() => {
+    console.log('currentUser UID', currentUser.uid);
+  },[])
+  
   return (
     <>
     <div className='affiliates-container'>

@@ -14,15 +14,21 @@ const DashBoard = () => {
   const urlRef = useRef(BASE_URL);
 
   const handleCategory = (param) => {
-    console.log('param: ', param);
     isCategoriesRef.current = false;
-    if(param === "Beginner"){
-      urlRef.current = 'api/v1/affiliates/search/?category=Beginner';
-    } else if (param === "HighPaying"){
-      urlRef.current = 'api/v1/affiliates/search/?category=High Paying';
-    } else if (param === "Categories"){
-      isCategoriesRef.current = true;
-      urlRef.current = '/api/v1/affiliates/categories';
+    switch(param) {
+      case "Beginner":
+        urlRef.current = 'api/v1/affiliates/search/?category=Beginner';
+        break;
+      case "HighPaying":
+        urlRef.current = 'api/v1/affiliates/search/?category=High Paying';
+        break;
+      case "Categories":
+        isCategoriesRef.current = true;
+        urlRef.current = '/api/v1/affiliates/categories';
+        break;
+      default:
+        urlRef.current = 'api/v1/affiliates/search/?category=Beginner';
+        break;
     }
     fetchAffiliates(param);
   }
@@ -33,8 +39,7 @@ const DashBoard = () => {
     .then(res => {
       if(!res.ok){
         throw Error('There is a server error');
-      }
-      console.log('res', res);
+      };
       return res.json();
      })
      .then(data => {
@@ -50,12 +55,7 @@ const DashBoard = () => {
   useEffect(() => {
     fetchAffiliates();
 
-  }, [])
-
-  useEffect(() => {
-    console.log('isCategories: ', isCategoriesRef.current);
-    console.log('affiliates: ', affiliates);
-  })
+  }, []);
 
   return (
     <>
@@ -73,7 +73,7 @@ const DashBoard = () => {
           className='blue-button' 
           onClick={() => handleCategory("Beginner")}
         >
-          For Begginers
+          For Beginners
         </button>
         <button 
           className='blue-button' 
@@ -95,7 +95,7 @@ const DashBoard = () => {
           </div> : 
             isCategoriesRef.current ? 
             affiliates[0].categories.map((category, index) => {
-              return <><CategoryCard key={index} category={category}/></>
+              return <CategoryCard key={index} category={category}/>
             }) :
          affiliates.map(data => {
           return (
