@@ -47,6 +47,20 @@
   background: white;
 }
 
+.affiliate-card p {
+  font-size: 0.8rem;
+}
+
+button.join-affiliate-button {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+button.join-affiliate-button.orange {
+  background: rgba(219,138,222,1);
+}
+
 .form-container{
   display: flex;
   flex-direction: column;
@@ -304,6 +318,7 @@ button.blue-button{
   padding: 0px;
   flex-direction: row;
   flex-wrap: wrap;
+  font-size: 0.8rem;
 }
 
 .loader-container {
@@ -371,6 +386,9 @@ nav.navigation-bar.navbar.navbar-expand-lg.navbar-light.bg-light {
 
 /* Responsive layout - makes a one column-layout instead of a two-column layout */
 @media (max-width: 850px) {
+  .right-div {
+    width: 1000%;
+  }
   .sign-up-column, .sign-up-column.form {
     flex: 100%;
   }
@@ -416,7 +434,7 @@ nav.navigation-bar.navbar.navbar-expand-lg.navbar-light.bg-light {
     margin: 20px;
     border-radius: 30px;
   }
-
+  
   .filter-cotainer {
     margin: 10px 20px;
     padding: 0px;

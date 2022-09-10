@@ -45,7 +45,7 @@ const SideNav = () => {
         </Link>
         <a href='#'>
             <div className='nav-section'>
-                Contact US
+                Contact Us
             </div>
         </a>
         <button onClick={handleLogOut} className="blue-button">

@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
+import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
@@ -49,7 +47,7 @@ const NavigationBar = () => {
             navbarScroll
           >
             <Nav.Link href="/">My Affiliates</Nav.Link>
-            <Nav.Link href="/">Profile</Nav.Link>
+            <Nav.Link href="/profile">Profile</Nav.Link>
             <div className='search-container'>
               <form className="affiliate-search d-flex">
                 <input

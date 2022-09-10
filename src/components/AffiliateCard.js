@@ -1,10 +1,32 @@
-import React from 'react'
+import React from 'react';
+import { useAuth } from '../context/AuthContext';
 
-const AffiliateCard = ({name, description, commission, categories, logo}) => {
+const AffiliateCard = ({name, description, commission, categories, logo, key}) => {
+
+    const { currentUser } = useAuth();
+
+    const handleAffliateList = (affilaiteId) => {
+        const userId = window.getItem("userId");
+        const payload = {
+            userId: currentUser.uid,
+            affiliates: [affilaiteId]
+        }
+        const requestOptions = { //
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          }
+          fetch(`api/v1/users/${userId }`, requestOptions)
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(err => console.log(err));
+        console.log('This is a put request!', payload);
+    }
+
   return (
     <div className='affiliate-card'>
         <div className='affilaite-container-head'>
-            <h3>{name}</h3>
+            <h5><strong>{name}</strong></h5>
             <img 
                 alt={`${name} logo`}
                 src={logo}
@@ -19,6 +41,11 @@ const AffiliateCard = ({name, description, commission, categories, logo}) => {
             </ul>
         </div>
         <button className='join-affiliate-button'>Join this Affiliate Program</button>
+        <button 
+            className='join-affiliate-button orange' 
+            onClick={() => console.log('Affiliate ID: ', key)}>
+            Add to Affiliate List
+        </button>
     </div>
   )
 }

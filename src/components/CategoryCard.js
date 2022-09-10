@@ -2,6 +2,7 @@ import React from 'react'
 import arrowIcon from '../assets/images/arrow-icon.png'
 
 const CategoryCard = ({category}) => {
+
   return (
     <div className='affiliate-card'>
         <div className='affilaite-container-head'>
