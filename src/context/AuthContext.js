@@ -1,6 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { auth } from '../firebase';
-import { makeid, postUserData } from '../logic/logic';
 
 const AuthContext = React.createContext();
 
@@ -13,14 +12,6 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   const signup = (email, password) => {
-    const userId = makeid(8);
-    window.localStorage.setItem("userId", userId);
-    const payload = {
-      userId,
-      email,
-    }
-    console.log('Post request', payload);
-    postUserData(payload);
     return auth.createUserWithEmailAndPassword(email, password);
   }
 

@@ -10,12 +10,17 @@ export const makeid = (length) => {
 }
 
 export const postUserData = (payload) => {
+    localStorage.setItem('updateUser', 'false');
     fetch('/v1/users/save', {
       method: 'post',
-      body: payload,
-    }).then(
-      console.log('user data has been saved')
-    ).catch(
-      console.log('error')
-    );
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload),
+    }).then((res) => {
+      console.log(res.json())
+    }).catch(() => {
+      localStorage.clear();
+    })
 }

@@ -1,10 +1,12 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef, useMemo} from 'react';
+import { useAuth } from "../context/AuthContext.js";
+import { postUserData } from '../logic/logic';
 import AffiliateCard from './AffiliateCard';
 import loadingGif from '../assets/gifs/loading.gif';
-import CategoryCard from './CategoryCard'
-
+import CategoryCard from './CategoryCard';
 
 const DashBoard = () => {
+  const { currentUser } = useAuth();
   const BASE_URL = 'api/v1/affiliates/search/?category=Beginner';
 
   const [errMsg, setErrMsg] = useState(null);
@@ -52,8 +54,26 @@ const DashBoard = () => {
       }); 
   }
 
+  const saveUserData = () => {
+    if(currentUser){
+      const payload = {
+        userId: currentUser.uid,
+        email: currentUser.email,
+      }
+      console.log('Post request', payload);
+      postUserData(payload);
+    }
+  }
+
+  const handleUserData = () => {
+    if(!localStorage.getItem('updateUser')){
+      saveUserData();
+    }
+  }
+
   useEffect(() => {
     fetchAffiliates();
+    handleUserData();
 
   }, []);
 
@@ -107,6 +127,7 @@ const DashBoard = () => {
               categories={data.category}
               logo={data.logo}
               data={data.affiliate_link}
+              affiliateId={data.affiliate_id}
             />)
           })
         }

@@ -1,13 +1,14 @@
 import React from 'react';
 import { useAuth } from '../context/AuthContext';
 
-const AffiliateCard = ({name, description, commission, categories, logo, key}) => {
+const AffiliateCard = ({name, description, commission, categories, logo, affiliateId}) => {
 
     const { currentUser } = useAuth();
 
     const handleAffliateList = (affilaiteId) => {
-        const userId = window.getItem("userId");
+        const userId = window.localStorage.getItem("userId");
         const payload = {
+            email: currentUser.email,
             userId: currentUser.uid,
             affiliates: [affilaiteId]
         }
@@ -43,7 +44,7 @@ const AffiliateCard = ({name, description, commission, categories, logo, key}) =
         <button className='join-affiliate-button'>Join this Affiliate Program</button>
         <button 
             className='join-affiliate-button orange' 
-            onClick={() => console.log('Affiliate ID: ', key)}>
+            onClick={() => handleAffliateList(affiliateId)}>
             Add to Affiliate List
         </button>
     </div>
