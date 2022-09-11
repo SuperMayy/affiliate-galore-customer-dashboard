@@ -9,6 +9,26 @@ const MyAffiliates = () => {
   const [isPending, setIsPending] = useState(true);
   const [affiliates, setAffiliates] = useState([]);
 
+  // const getUserData = () => {
+  //   fetch(`/api/v1/users/${currentUser.uid}`)
+  //   .then(res => {
+  //     if(!res.ok){
+  //       throw Error('There is a server error');
+  //     };
+  //     return res.json();
+  //    })
+  //    .then(data => {
+  //       setUserData(data);
+  //     })
+  //     .catch(err => {
+  //       setError(err);
+  //     }); 
+  // }
+
+  // useEffect(() => {
+  //   getUserData();
+  // }, [])
+
   useEffect(() => {
     console.log('currentUser UID', currentUser.uid);
   },[])

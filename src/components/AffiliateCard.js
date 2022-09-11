@@ -6,22 +6,19 @@ const AffiliateCard = ({name, description, commission, categories, logo, affilia
     const { currentUser } = useAuth();
 
     const handleAffliateList = (affilaiteId) => {
-        const userId = window.localStorage.getItem("userId");
         const payload = {
-            email: currentUser.email,
-            userId: currentUser.uid,
-            affiliates: [affilaiteId]
+            affiliates: affilaiteId
         }
-        const requestOptions = { //
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-          }
-          fetch(`api/v1/users/${userId }`, requestOptions)
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(err => console.log(err));
-        console.log('This is a put request!', payload);
+          fetch(`/v1/users/${currentUser.uid}`, {
+            method: 'put',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+              },
+            body: JSON.stringify(payload),
+          })
+            .then(response => response)
+            .catch(err => console.err(err));
     }
 
   return (
