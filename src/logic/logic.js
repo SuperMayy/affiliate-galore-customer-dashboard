@@ -19,7 +19,7 @@ export const postUserData = (payload) => {
       },
       body: JSON.stringify(payload),
     }).then((res) => {
-      console.log(res.json())
+      return res.json();
     }).catch(() => {
       localStorage.clear();
     })
