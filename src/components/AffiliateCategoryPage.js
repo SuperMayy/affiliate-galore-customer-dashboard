@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { useAuth } from "../context/AuthContext.js";
+import React, { useState, useEffect } from 'react'
+import { useParams } from "react-router-dom";
 import AffiliateCard from './AffiliateCard';
 
-const MyAffiliates = () => {
-  const { currentUser } = useAuth();
+const AffiliateCategoryPage = () => {
+  let { category } = useParams();
   const [err, setErrMsg] = useState(null);
   const [affiliates, setAffiliates] = useState([]);
   const [isPending, setIsPending] = useState(false);
 
-  const getUsersAffiliates = () => {
-    fetch(`/api/v1/users/affiliates/${currentUser.uid}`)
+  const getCategoryAffiliates = () => {
+    fetch(`/api/v1/affiliates/search/?category=${category}`)
     .then(res => {
       if(!res.ok){
         throw Error('There is a server error');
@@ -25,16 +25,13 @@ const MyAffiliates = () => {
   }
 
   useEffect(() => {
-    getUsersAffiliates();
+    getCategoryAffiliates();
   }, [])
-  
+
   return (
-    <>
-    <div className='affiliates-container'>
+    <div>
         { affiliates.map(data => {
           return (
-            //make parameter to add remove from affiliate list button.
-            //deal with erros and sucess message of no affilaites
           <AffiliateCard 
             key={data.affiliate_id}
             name={data.name}
@@ -44,12 +41,10 @@ const MyAffiliates = () => {
             logo={data.logo}
             data={data.affiliate_link}
             msg={data.msg}
-            affiliateList={true}
           />)
         })}
     </div>
-    </>
   )
 }
 
-export default MyAffiliates
+export default AffiliateCategoryPage

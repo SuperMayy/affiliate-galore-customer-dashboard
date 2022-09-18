@@ -24,19 +24,19 @@ const NavigationBar = () => {
 
   return (
     <Navbar bg="light" expand="lg" className="navigation-bar">
-      <div className='search-container desktop'>
+      {/* <div className='search-container desktop'>
         <form className="affiliate-search d-flex">
           <input
               className="affiliate-input-search" 
               type="text" 
               id="affiliate" 
               name="affiliate" 
-              // ref={searchRef}
+              ref={searchRef}
               placeholder="Search for affiliate companies"
           />
           <button className="search-button">Search</button>
         </form>
-      </div>
+      </div> */}
       <Container fluid>
         <Navbar.Brand href="/">Dashboard</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -46,9 +46,9 @@ const NavigationBar = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="/">My Affiliates</Nav.Link>
+            <Nav.Link href="/my-affiliates">My Affiliates</Nav.Link>
             <Nav.Link href="/profile">Profile</Nav.Link>
-            <div className='search-container'>
+            {/* <div className='search-container'>
               <form className="affiliate-search d-flex">
                 <input
                     className="affiliate-input-search" 
@@ -60,7 +60,7 @@ const NavigationBar = () => {
                 />
                 <button className="search-button">Search</button>
               </form>
-            </div>
+            </div> */}
             <button onClick={handleLogOut} className="blue-button">
               Log Out
             </button>

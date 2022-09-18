@@ -3,30 +3,8 @@ import { useAuth } from '../context/AuthContext';
 import { Link } from "react-router-dom";
 
 const Profile = () => {
-
-  //const [error, setError] = useState('');
-  //const [userData, setUserData] = useState('')
+  
   const { currentUser } = useAuth();
-
-  // const getUserData = () => {
-  //   fetch(`/api/v1/users/${currentUser.uid}`)
-  //   .then(res => {
-  //     if(!res.ok){
-  //       throw Error('There is a server error');
-  //     };
-  //     return res.json();
-  //    })
-  //    .then(data => {
-  //       setUserData(data);
-  //     })
-  //     .catch(err => {
-  //       setError(err);
-  //     }); 
-  // }
-
-  // useEffect(() => {
-  //   getUserData();
-  // }, [])
 
   return (
     <>

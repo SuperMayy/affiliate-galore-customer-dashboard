@@ -8,6 +8,7 @@ import UpdateProfile from './UpdateProfile';
 import Error from './Error';
 import Layout from '../layouts/Layout';
 import PrivateRoute from './PrivateRoute';
+import AffiliateCategoryPage from './AffiliateCategoryPage'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
                 <Route exact path="/profile" element={<Profile />} />
                 <Route exact path="/my-affiliates" element={<MyAffiliates />} />
                 <Route exact path="/update-profile" element={<UpdateProfile />} />
+                <Route exact path="/affiliate-categories/:category" element={<AffiliateCategoryPage />} />
               </Route>
             </Route>
 
