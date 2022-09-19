@@ -126,7 +126,7 @@ const DashBoard = () => {
               commission={data.commission}
               categories={data.category}
               logo={data.logo}
-              data={data.affiliate_link}
+              affiliateLink={data.affiliate_link}
               affiliateId={data.affiliate_id}
             />)
           })

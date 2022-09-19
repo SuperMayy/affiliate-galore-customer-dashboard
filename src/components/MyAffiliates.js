@@ -47,7 +47,7 @@ const MyAffiliates = () => {
             commission={data.commission}
             categories={data.category}
             logo={data.logo}
-            data={data.affiliate_link}
+            affiliateLink={data.affiliate_link}
             msg={data.msg}
             affiliateList={true}
             affiliateId={data.affiliate_id}

@@ -45,8 +45,8 @@ const AffiliateCategoryPage = () => {
             commission={data.commission}
             categories={data.category}
             logo={data.logo}
-            data={data.affiliate_link}
             msg={data.msg}
+            affiliateLink={data.affiliate_link}
           />)
         })}
     </div>

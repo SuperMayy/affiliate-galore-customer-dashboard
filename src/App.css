@@ -7,7 +7,8 @@
   height:100%;
 }
 
-.affiliates-container a {
+.affiliates-container a,
+a .join-affiliate-button{
   text-decoration: none;
 }
 

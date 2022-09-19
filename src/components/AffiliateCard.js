@@ -9,7 +9,9 @@ const AffiliateCard = ({
     logo, 
     affiliateId, 
     msg, 
-    affiliateList}) => {
+    affiliateList,
+    affiliateLink
+  }) => {
 
     const { currentUser } = useAuth();
 
@@ -54,7 +56,9 @@ const AffiliateCard = ({
                   {categories.map(category => <li key={category}>{category} |</li>)}
               </ul>
           </div>
-          <button className='join-affiliate-button'>Join this Affiliate Program</button>
+          <a href={affiliateLink}>
+            <button className='join-affiliate-button'>Join this Affiliate Program</button>
+          </a>
           {!affiliateList ? <button 
               className='join-affiliate-button orange' 
               onClick={() => handleAffliateList(affiliateId, '/v1/users/')}>
