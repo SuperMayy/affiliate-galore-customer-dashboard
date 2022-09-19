@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import logo from '../assets/images/logo.png'
 
 const NavigationBar = () => {
   const { logout } = useAuth();
@@ -38,7 +39,11 @@ const NavigationBar = () => {
         </form>
       </div> */}
       <Container fluid>
-        <Navbar.Brand href="/">Dashboard</Navbar.Brand>
+        <Navbar.Brand href="https://www.affiliategalore.com">
+          <div>
+            <img src={logo} alt="logo" className='logo-style'/>
+          </div>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -46,8 +51,10 @@ const NavigationBar = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
+            <Nav.Link href="/">Dashboard</Nav.Link>
             <Nav.Link href="/my-affiliates">My Affiliates</Nav.Link>
             <Nav.Link href="/profile">Profile</Nav.Link>
+            <Nav.Link href="https://www.affiliategalore.com/#contact-section">Contact Us</Nav.Link>
             {/* <div className='search-container'>
               <form className="affiliate-search d-flex">
                 <input

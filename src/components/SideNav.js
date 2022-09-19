@@ -43,7 +43,7 @@ const SideNav = () => {
                 Profile
             </div>
         </Link>
-        <a href='#'>
+        <a href='https://www.affiliategalore.com/#contact-section'>
             <div className='nav-section'>
                 Contact Us
             </div>
