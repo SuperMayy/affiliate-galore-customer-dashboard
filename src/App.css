@@ -7,6 +7,10 @@
   height:100%;
 }
 
+.affiliates-container a {
+  text-decoration: none;
+}
+
 .logo {
   width: 100%;
   max-width: 200px;
@@ -212,7 +216,7 @@ header{
 main.App {
   display: flex;
   flex-direction: row;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .page-content{

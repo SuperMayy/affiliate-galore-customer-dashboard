@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from "react-router-dom";
 import AffiliateCard from './AffiliateCard';
+import loadingGif from '../assets/gifs/loading.gif';
 
 const AffiliateCategoryPage = () => {
   let { category } = useParams();
-  const [err, setErrMsg] = useState(null);
+  const [errMsg, setErrMsg] = useState(null);
   const [affiliates, setAffiliates] = useState([]);
-  const [isPending, setIsPending] = useState(false);
+  const [isPending, setIsPending] = useState(true);
 
   const getCategoryAffiliates = () => {
+    setIsPending(true);
     fetch(`/api/v1/affiliates/search/?category=${category}`)
     .then(res => {
       if(!res.ok){
@@ -18,6 +20,7 @@ const AffiliateCategoryPage = () => {
      })
      .then(data => {
         setAffiliates(data);
+        setIsPending(false);
       })
       .catch(err => {
         setErrMsg(err);
@@ -30,7 +33,10 @@ const AffiliateCategoryPage = () => {
 
   return (
     <div>
-        { affiliates.map(data => {
+        { isPending ? errMsg ? <div>{errMsg}</div> :  
+         <div className='loader-container'>
+            <img src={loadingGif} alt='loader' />
+          </div> : affiliates.map(data => {
           return (
           <AffiliateCard 
             key={data.affiliate_id}

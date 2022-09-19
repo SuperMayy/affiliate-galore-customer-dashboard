@@ -13,20 +13,26 @@ const AffiliateCard = ({
 
     const { currentUser } = useAuth();
 
-    const handleAffliateList = (affilaiteId) => {
-        const payload = {
-            affiliates: affilaiteId
+    const handleAffliateList = (affilaiteId, url) => {  
+      const payload = {
+          affiliates: affilaiteId
+      }
+      
+      fetch(`${url}${currentUser.uid}`, {
+        method: 'put',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+        body: JSON.stringify(payload),
+      })
+      .then(response => {
+        if(response){
+          window.location.reload();
         }
-          fetch(`/v1/users/${currentUser.uid}`, {
-            method: 'put',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-              },
-            body: JSON.stringify(payload),
-          })
-            .then(response => response)
-            .catch(err => console.err(err));
+        return response
+      })
+      .catch(err => console.err(err));
     }
 
   return (
@@ -48,10 +54,14 @@ const AffiliateCard = ({
               </ul>
           </div>
           <button className='join-affiliate-button'>Join this Affiliate Program</button>
-          {!affiliateList && <button 
+          {!affiliateList ? <button 
               className='join-affiliate-button orange' 
-              onClick={() => handleAffliateList(affiliateId)}>
+              onClick={() => handleAffliateList(affiliateId, '/v1/users/')}>
               Add to Affiliate List
+          </button> : <button 
+              className='join-affiliate-button orange' 
+              onClick={() => handleAffliateList(affiliateId, '/v1/users/remove/')}>
+              Remove from Affiliate List
           </button>}
       </div>}
     </>
