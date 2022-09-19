@@ -9,17 +9,17 @@ import logo from '../assets/images/logo.png'
 const NavigationBar = () => {
   const { logout } = useAuth();
 
-  const [error, setError] = useState('');
+  // const [error, setError] = useState('');
 
   const navigate = useNavigate();
 
   const handleLogOut = async () => {
-    setError('');
+    // setError('');
     try{
         await logout();
         navigate('/');
     } catch {
-        setError('Failed to log out');
+        // setError('Failed to log out');
     }   
   };
 
