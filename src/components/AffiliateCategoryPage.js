@@ -11,7 +11,7 @@ const AffiliateCategoryPage = () => {
 
   const getCategoryAffiliates = () => {
     setIsPending(true);
-    fetch(`/api/v1/affiliates/search/?category=${category}`)
+    fetch(`${process.env.REACT_APP_AG_API}/api/v1/affiliates/search/?category=${category}`)
     .then(res => {
       if(!res.ok){
         throw Error('There is a server error');

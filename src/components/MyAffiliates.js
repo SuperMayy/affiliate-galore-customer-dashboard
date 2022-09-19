@@ -11,7 +11,7 @@ const MyAffiliates = () => {
 
   const getUsersAffiliates = () => {
     setIsPending(true);
-    fetch(`/api/v1/users/affiliates/${currentUser.uid}`)
+    fetch(`${process.env.REACT_APP_AG_API}/api/v1/users/affiliates/${currentUser.uid}`)
     .then(res => {
       if(!res.ok){
         throw Error('There is a server error');

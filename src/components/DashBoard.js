@@ -7,7 +7,7 @@ import CategoryCard from './CategoryCard';
 
 const DashBoard = () => {
   const { currentUser } = useAuth();
-  const BASE_URL = 'api/v1/affiliates/search/?category=Beginner';
+  const BASE_URL = '/api/v1/affiliates/search/?category=Beginner';
 
   const [errMsg, setErrMsg] = useState(null);
   const [isPending, setIsPending] = useState(true);
@@ -19,17 +19,17 @@ const DashBoard = () => {
     isCategoriesRef.current = false;
     switch(param) {
       case "Beginner":
-        urlRef.current = 'api/v1/affiliates/search/?category=Beginner';
+        urlRef.current = '/api/v1/affiliates/search/?category=Beginner';
         break;
       case "HighPaying":
-        urlRef.current = 'api/v1/affiliates/search/?category=High Paying';
+        urlRef.current = '/api/v1/affiliates/search/?category=High Paying';
         break;
       case "Categories":
         isCategoriesRef.current = true;
         urlRef.current = '/api/v1/affiliates/categories';
         break;
       default:
-        urlRef.current = 'api/v1/affiliates/search/?category=Beginner';
+        urlRef.current = '/api/v1/affiliates/search/?category=Beginner';
         break;
     }
     fetchAffiliates(param);
@@ -37,7 +37,7 @@ const DashBoard = () => {
 
   const fetchAffiliates = () => {
     setIsPending(true);
-    fetch(urlRef.current)
+    fetch(`${process.env.REACT_APP_AG_API}${urlRef.current}`)
     .then(res => {
       if(!res.ok){
         throw Error('There is a server error');

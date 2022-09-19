@@ -18,7 +18,7 @@ const AffiliateCard = ({
           affiliates: affilaiteId
       }
       
-      fetch(`${url}${currentUser.uid}`, {
+      fetch(`${process.env.REACT_APP_AG_API}${url}${currentUser.uid}`, {
         method: 'put',
         headers: {
             'Accept': 'application/json',
@@ -27,7 +27,8 @@ const AffiliateCard = ({
         body: JSON.stringify(payload),
       })
       .then(response => {
-        if(response){
+        console.log(response);
+        if(response && url === '/v1/users/remove/'){
           window.location.reload();
         }
         return response
