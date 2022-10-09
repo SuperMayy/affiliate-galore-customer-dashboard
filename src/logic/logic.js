@@ -11,7 +11,7 @@ export const makeid = (length) => {
 
 export const postUserData = (payload) => {
     localStorage.setItem('updateUser', 'false');
-    fetch(`${process.env.REACT_APP_AG_API}v1/users/save`, {
+    fetch(`${process.env.REACT_APP_AG_API}/v1/users/save`, {
       method: 'post',
       headers: {
         'Accept': 'application/json',
